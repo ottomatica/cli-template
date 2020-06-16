@@ -1,6 +1,6 @@
 {
   "name": "cli-template",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A minimalistic template for Node.js cli apps",
   "main": "index.js",
   "bin": "index.js",
