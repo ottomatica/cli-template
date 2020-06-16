@@ -1,0 +1,29 @@
+{
+  "name": "cli-template",
+  "version": "0.1.0",
+  "description": "A minimalistic template for Node.js cli apps",
+  "main": "index.js",
+  "bin": "index.js",
+  "scripts": {
+    "test": "jest --colors"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ottomatica/cli-template.git"
+  },
+  "keywords": [
+    "cli-template"
+  ],
+  "author": "ottomatica",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/ottomatica/cli-template/issues"
+  },
+  "homepage": "https://github.com/ottomatica/cli-template#readme",
+  "dependencies": {
+    "yargs": "^15.3.1"
+  },
+  "devDependencies": {
+    "jest": "^26.0.1"
+  }
+}
