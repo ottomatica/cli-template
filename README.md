@@ -26,7 +26,7 @@ Commands are define in [`./lib/commands/*.js`](./lib/commands). This template in
 exports.command = 'start <foo> [bar]';          // <--- This is where you define the command name and args
                                                 //        <foo> is a required, and [bar] is optional
 
-exports.desc = 'This is the start command';     // <--- The command description shown when you run `--help` command
+exports.desc = 'This is the start command';     // <--- The command description shown when you run `--help`
 
 exports.builder = yargs => {
     yargs.options({                             // <--- Add as many options you need here
@@ -37,8 +37,8 @@ exports.builder = yargs => {
             type: 'boolean'
         },
     });
-
-    yargs.example(`$0 start foo`, `Example of how to use this command`)    // <--- optionally add an example to `--help` command
+                                                // <--- optionally add an example to `--help` command
+    yargs.example(`$0 start foo`, `Example of how to use this command`);
 };
 
 exports.handler = async argv => {
@@ -51,7 +51,7 @@ exports.handler = async argv => {
 
 > _Note: the command name is what you specify in `exports.command` property of the file, not the name of the file you create._
 
-As we are using [Yargs](https://www.npmjs.com/package/yargs) for creating these commands, by setting the properties mentioned above, we will also get a nice `--help` command automatically:
+Since we are using [Yargs](https://www.npmjs.com/package/yargs) for creating these commands, by setting the properties mentioned above, we will also get a nice `--help` command automatically:
 
 ```bash
 $ cli-template start --help
@@ -61,9 +61,9 @@ cli-template start <foo> [bar]
 This is the start command
 
 Options:
-  --version          Show version number                                                                                   [boolean]
-  --help             Show help                                                                                             [boolean]
-  --force, -f, --ff  Description for force options                                                        [boolean] [default: false]
+  --version          Show version number                                           [boolean]
+  --help             Show help                                                     [boolean]
+  --force, -f, --ff  Description for force options                [boolean] [default: false]
 
 Examples:
   cli-template start foo      Example of how to use this command
